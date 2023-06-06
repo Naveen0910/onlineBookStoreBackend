@@ -14,8 +14,10 @@ import {
   allOrders,
 } from "../controllers/auth.js";
 
+const base_url = process.env.BASE_URL
+
 router.post("/register", register);
-router.post("/login", login);
+router.post(`${base_url}/login`, login);
 router.get("/auth-check", requireSignin, (req, res) => {
   res.json({ ok: true });
 });
