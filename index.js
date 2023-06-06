@@ -22,10 +22,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// router middleware
-app.use("/api", authRoutes);
-app.use("/api", categoryRoutes);
-app.use("/api", productRoutes);
 
 const port = process.env.PORT || 8000;
 
